@@ -42,7 +42,6 @@ docker run -d --rm ubuntu sleep infinity
 
 no exemplo acima utilizamos também as opções "-d" e "--rm", elas servem para que o container não fique preso na sua tela e caso ele saia automaticamente seja removido.
 
-
 Portas dos containers não necessáriamente estão esposta para o host, para que isso aconteça é necessário que a porta seja publicada para o host utilizando a opção "-p" de modo que indiquemos a portaDoHost:portaDoContainer ex.:
 
 ```shell
