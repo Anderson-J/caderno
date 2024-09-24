@@ -1,0 +1,25 @@
+services:
+
+  laravel:
+    build:
+      context: ./php/laravel/
+      dockerfile: Dockerfile
+    image: anderaoliv/laravel:v1
+    container_name: laravel
+    networks:
+    - mynet
+
+  nginx:
+    build:
+    context: ./nginx
+    dockerfile: Dockerfile
+  image: anderaoliv/nginx
+  container_name: nginx
+  ports:
+   - 8080:80
+  networks:
+   - mynet
+
+networks:
+ mynet:
+  driver: bridge
